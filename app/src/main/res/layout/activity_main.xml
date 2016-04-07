@@ -1,0 +1,189 @@
+?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/basketball"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <!-- Linear Layout koji prikazuje tablicu za Domace -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <!-- Tekst koji prikazuje "Domaći" na tablici -->
+
+            <TextView
+                android:text="Domaći"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="61dp"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <!-- Tekst koji prikazuje ukupni rezultat za Domaće -->
+
+            <TextView
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="81dp"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0"
+                android:id="@+id/domaci_rezultat"
+                />
+
+            <!-- Button koji dodaje +3 boda na ukupni rezultat za Domaće -->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="+3"
+                android:layout_marginTop="10dp"
+                android:onClick="tri"
+                android:layout_weight="0"
+                android:id="@+id/tri"
+                />
+
+            <!-- Button koji dodaje +2 boda na ukupni rezultat za Domaće -->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="+2"
+                android:layout_marginTop="10dp"
+                android:onClick="dva"
+                android:layout_weight="1"
+                android:id="@+id/dva"
+                />
+
+            <!-- Button koji dodaje +1 bod na ukupni rezultat za Domaće -->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="SLOBODNO BACANJE"
+                android:layout_marginTop="10dp"
+                android:onClick="bacanje"
+                android:layout_weight="0"
+                android:id="@+id/jedan"
+                />
+
+            <!-- Linear Layout koji prikazuje tablicu za Goste -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <!-- Tekst koji prikazuje "Gosti" na tablici -->
+
+            <TextView
+                android:text="Gosti"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"
+                android:orientation="horizontal"
+                />
+
+            <!-- Tekst koji prikazuje ukupni rezultat za Goste -->
+
+            <TextView
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="81dp"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/gosti_rezultat"
+                android:layout_weight="0"
+                />
+
+            <!-- Button koji dodaje +3 boda na ukupni rezultat za Goste -->
+
+            <Button
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="+3"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tri_boda"
+                android:onClick="tri_boda"
+                android:layout_weight="0"
+                />
+
+            <!-- Button koji dodaje +2 boda na ukupni rezultat za Goste -->
+
+            <Button
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="+2"
+                android:layout_marginTop="10dp"
+                android:id="@+id/dva_boda"
+                android:onClick="dva_boda"
+                android:layout_weight="0"
+                />
+
+            <!-- Button koji dodaje +1 bod na ukupni rezultat za Goste -->
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="SLOBODNO BACANJE"
+                android:layout_marginTop="10dp"
+                android:id="@+id/slobodno_bacanje"
+                android:onClick="slobodnoBacanje"
+                android:layout_weight="0"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!-- Reset button koji vraca oba dvije tablice na pocetno stanje (0) -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="RESET"
+        android:orientation="horizontal"
+        android:id="@+id/reset"
+        android:onClick="reset"
+        />
+
+
+</LinearLayout>
